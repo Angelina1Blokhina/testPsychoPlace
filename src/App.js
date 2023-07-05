@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import FaqItem from './FaqItem';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <h1>Часто задаваемые вопросы</h1>
+      <FaqItem
+        question="Как забронировать кабинет?"
+        answer="Это можно сделать на странице расписания"
+      />
+      <FaqItem
+        question="Как связаться с поддержкой?"
+        answer="Вы можете отправить нам письмо на почту"
+      />
     </div>
   );
 }

@@ -1,0 +1,5 @@
+SELECT u.name AS name, IFNULL(SUM(TIMESTAMPDIFF(HOUR, r.time_start, r.time_end)), 0) AS hours
+FROM users u
+LEFT JOIN reservations r ON u.phone = r.user
+WHERE u.level > 0
+GROUP BY u.phone
